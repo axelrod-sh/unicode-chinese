@@ -1,31 +1,57 @@
+* {
+    font-weight: bold; /* 所有元素的文本都加粗 */
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
     text-align: center;
+    margin: 0;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
     justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #ff69b4;
 }
 
 .converter {
-    width: 50%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
     text-align: left;
 }
 
-input[type="text"], textarea {
-    width: 70%;
-    padding: 5px;
+input[type="text"], textarea, button {
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
     margin: 10px 0;
-}
-
-textarea {
-    height: 100px;
-    resize: vertical;
+    width: calc(100% - 30px);
+    background-color: #e6e6fa;
 }
 
 button {
-    padding: 5px 15px;
-    margin-left: 5px;
+    background-color: #ff69b4;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff8cb4;
+}
+
+@media (max-width: 600px) {
+    .converter {
+        width: 90%;
+    }
 }
