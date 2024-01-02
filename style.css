@@ -39,13 +39,6 @@ input[type="text"], textarea, button {
     background-color: #e6e6fa;
 }
 
-button {
-    background-color: #ff69b4;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
 button:hover {
     background-color: #ff8cb4;
 }
@@ -55,3 +48,35 @@ button:hover {
         width: 90%;
     }
 }
+
+button {
+    background-color: #ff69b4;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    margin: 10px 0;
+    width: calc(100% - 20px);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#copy-tooltip {
+    position: fixed;
+    top: 20px; /* 改为在顶部显示 */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    color: white;
+    border-radius: 5px;
+    z-index: 1000;
+    animation: fade-in-out 3s; /* 添加淡入淡出的动画 */
+}
+
+@keyframes fade-in-out {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+}
+

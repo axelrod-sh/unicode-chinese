@@ -13,3 +13,20 @@ function convertToChinese() {
     }).join('');
     document.getElementById('result').value = chinese;
 }
+
+function copyToClipboard() {
+    var copyText = document.getElementById("result");
+    copyText.select();
+    document.execCommand("copy");
+
+    // 创建一个新的提示元素
+    var tooltip = document.createElement("div");
+    tooltip.innerText = "内容已复制到剪贴板";
+    tooltip.id = "copy-tooltip";
+    document.body.appendChild(tooltip);
+
+    // 几秒钟后移除提示
+    setTimeout(function() {
+        tooltip.remove();
+    }, 3000); // 2秒后提示消失
+}
